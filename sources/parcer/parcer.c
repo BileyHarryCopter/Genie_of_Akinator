@@ -1,55 +1,17 @@
 #include "parcer.h"
 #include "../includes/errors.h"
 #include "../includes/initlex.h"
-
-//  definition of structure of node
-typedef struct node_t
-{
-    struct node_t  *left, *right;
-    unsigned       depth;
-    data_t         data;
-} node_t;
-
-typedef struct tree_t
-{
-    node_t        *top;
-    unsigned      size;
-} tree_t;
+#include "../includes/inittree.h"
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
+                       //    Realisation of Parcer    //
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
-int TreeDel (node_t *top);
-int NodeDel (node_t *node);
-tree_t *TreeCtor (data_t datatop);
-node_t *NodeCtor (data_t datanode);
-int TreePrint (node_t *top, unsigned count);
-
-node_t *ParceTree (lex_array_t *lexus);
-node_t *TreeFill (lex_array_t * lexus);
-//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
-//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
-int main (void)
-{
-    lex_array_t * lexus = LexsInit (CAP_INIT);
-    if (LexsFill (lexus, "checkdata.txt") == NO_ERROR)
-    {
-        LexsPrint (lexus);
-    }
-
-    node_t * tree = ParceTree (lexus);
-    TreePrint (tree, 0);
-
-    LexsDelete (lexus);
-    TreeDel (tree);
-    return 0;
-}
-
 tree_t *TreeCtor (data_t datatop)
 {
     assert (datatop);
     tree_t *tree    = (tree_t *) calloc (1, sizeof (tree_t));
     tree->top       = (node_t *) calloc (1, sizeof (node_t));
     tree->top->data = (data_t)   calloc (STR_INIT ,sizeof (char));
-    tree->top->data = memmove (tree->top->data, datatop, STR_INIT);
+    tree->top->data = memmove (tree->top->data, datatop, strlen (datatop));
     tree->size = 0;
 
     return tree;
@@ -60,41 +22,42 @@ node_t *NodeCtor (data_t datanode)
     assert (datanode);
     node_t *node = (node_t *) calloc (1, sizeof (node_t));
     node->data   = (data_t) calloc (STR_INIT, sizeof (char));
-    node->data   = memmove (node->data, datanode, STR_INIT);
+    node->data   = memmove (node->data, datanode, strlen (datanode));
 
-    printf ("ADDRESS of node = %p\n", node);
-    printf ("ADDRESS of node data = %p\n", node->data);
+    // printf ("ADDRESS of node = %p\n", node);
+    // printf ("ADDRESS of node data = %p\n", node->data);
     return node;
 }
 
 //  realization by DED
-int TreePrint (node_t *top, unsigned count)
+int TreePrint (node_t *top, unsigned count, FILE * file)
 {
     //  just c flex
-    printf ("%*s%s", 4*count, "{", top->data);
+    assert (file);
+    fprintf (file, "%*s%s", 4*count, "{", top->data);
     if (!top->left && !top->right)
     {
-        printf ("}\n");
+        fprintf (file, "}\n");
         return NO_ERROR;
     }
-    printf ("\n");
+    fprintf (file, "\n");
     if (top->left && !top->right)
     {
-        TreePrint (top->left, ++count);
+        TreePrint (top->left, ++count, file);
         --count;
     }
     if (!top->left && top->right)
     {
-        TreePrint (top->right, ++count);
+        TreePrint (top->right, ++count, file);
         --count;
     }
-    if (top->left && top->right && TreePrint (top->left, ++count) == NO_ERROR)
+    if (top->left && top->right && TreePrint (top->left, ++count, file) == NO_ERROR)
     {
         --count;
-        TreePrint (top->right, ++count);
+        TreePrint (top->right, ++count, file);
         --count;
     }
-    printf ("%*s\n", 4*count, "}");
+    fprintf (file, "%*s\n", 4*count, "}");
     return NO_ERROR;
 }
 
