@@ -1,5 +1,7 @@
+#ifndef INITLEX
+#define INITLEX
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
-        //  Incapsulation of initialization the structure of lexems //  
+        //  Incapsulation of initialization the structure of lexems //
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
 typedef union lexem
 {
@@ -20,3 +22,4 @@ typedef struct lex_array_t
 } lex_array_t;
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
+#endif
