@@ -4,17 +4,21 @@
 CC= gcc
 CFLAGS= -c
 LEXERSRC=  sources/lexer
+PARCERSRC= sources/parcer
 
 all: start clean
 
-start: main.o lexer.o
-	gcc main.o lexer.o -o start
+start: main.o lexer.o parcer.o
+	$(CC) main.o lexer.o parcer.o -o start
 
 main.o:
 	$(CC) $(CFLAGS) main.c
 
 lexer.o:
 	$(CC) $(CFLAGS) $(LEXERSRC)/lexer.c
+
+parcer.o:
+	$(CC) $(CFLAGS) $(PARCERSRC)/parcer.c
 
 run:
 	./start
@@ -26,4 +30,4 @@ clean:
 	rm -rf *.o
 # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS
 # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS
-# MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS 
+# MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS # MY PRETTY CFLAGFS
