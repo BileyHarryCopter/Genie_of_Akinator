@@ -1,0 +1,7 @@
+{Hotel?
+   {Trivago}
+   {Friday?
+       {Saturday}
+       {EEE... chill}
+   }
+}
