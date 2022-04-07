@@ -3,7 +3,7 @@
 #include "../includes/initlex.h"
 
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
-//      Realisation of Lexer
+                     //    Realisation of Lexer    //
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
 lex_array_t *LexsInit (unsigned capacity)
 {
@@ -67,8 +67,8 @@ int LexsInsert (lex_array_t *lexus, lexem_kind_t kind, ...)
     {
         case QUESTION:
         case ANSWER:
-            lexus->lexems[lexus->size].lexm.data = (char *) calloc (strlen(data) + 1, sizeof (char));
-            lexus->lexems[lexus->size].lexm.data = memmove (lexus->lexems[lexus->size].lexm.data, data, strlen(data) + 1);
+            lexus->lexems[lexus->size].lexm.data = (char *) calloc (strlen(data), sizeof (char));
+            lexus->lexems[lexus->size].lexm.data = memmove (lexus->lexems[lexus->size].lexm.data, data, strlen(data));
             break;
         case BRACKET:
             lexus->lexems[lexus->size].lexm.brac = brac;
@@ -77,6 +77,8 @@ int LexsInsert (lex_array_t *lexus, lexem_kind_t kind, ...)
             return ERROR;
     }
     lexus->size++;
+
+    va_end (args);
 
     return NO_ERROR;
 }
@@ -114,7 +116,7 @@ int LexsPrint (lex_array_t *lexus)
     return NO_ERROR;
 }
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
-//  reading of file with data and filling lexem_array
+//  reading of file with data and filling lexem_array   //
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
 FILE * FileOpen (const char *file_name, const char *mode)
 {

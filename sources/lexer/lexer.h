@@ -1,5 +1,9 @@
 #include "../includes/standarts.h"
 
+#ifndef LEXER
+#define LEXER
+
+
 #define KRIT_KF 0.6
 #define ENCR_KF 2
 #define CAP_INIT 20
@@ -16,7 +20,10 @@ typedef union lexem lexem;
 typedef struct lexem_t lexem_t;
 
 typedef struct lex_array_t lex_array_t;
+
+#endif
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
+                    //  lexer's function prototypes   //
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
 int StrDel (char *str);
 int IsQuest (char *str);
@@ -28,3 +35,5 @@ lex_array_t *LexsInit (unsigned capacity);
 int LexsFill (lex_array_t *lexus, const char *file_name);
 FILE * FileOpen (const char *file_name, const char *mode);
 int LexsInsert (lex_array_t *lexus, lexem_kind_t kind, ...);
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
+//===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
