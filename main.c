@@ -6,14 +6,15 @@
 int main (void)
 {
     lex_array_t * lexus = LexsInit (CAP_INIT);
+
     if (LexsFill (lexus, "data.txt") == NO_ERROR)
-    {
-        LexsPrint (lexus);
-    }
+        // LexsPrint (lexus);
+        printf ("LOL\n");
     else
         printf ("LOH\n");
 
-	return 0;
+    LexsDelete (lexus);
+    return 0;
 }
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
