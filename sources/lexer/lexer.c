@@ -27,6 +27,12 @@ int LexsDelete (lex_array_t *lexus)
 {
     assert (lexus);
     assert (lexus->lexems);
+
+    for (int i = 0; i < lexus->size; i++)
+    {
+        if (lexus->lexems[i].kind != BRACKET)
+            free (lexus->lexems[i].lexm.data);
+    }
     free   (lexus->lexems);
     free   (lexus);
     return NO_ERROR;
@@ -81,7 +87,7 @@ int LexsPrint (lex_array_t *lexus)
     int kind = 0;
     int brac = 0;
 
-    for (unsigned pos = 0; pos < lexus->size; pos++)
+    for (unsigned pos = 0; pos < lexus->size - 1; pos++)
     {
         kind = lexus->lexems[pos].kind;
         switch (kind)
