@@ -1,0 +1,22 @@
+digraph AKINATOR
+{
+	graph [dpi = 200];
+	rankdir = HR;
+
+	subgraph TREE
+	{
+		node [shape = egg, style = "filled", fillcolor = "bisque", fontcolor = "black", fontsize = 12];
+		edge [color = "black", fontcolor = "black", fontsize = 12, fontname = "Impact"];
+
+		node_0x7fe261d05930 [label = "Is about linal?", fillcolor = "powderblue"];
+		node_0x7fe261d05950 [label = "Jordan's method"];
+		node_0x7fe261d05a10 [label = "Is about basketball?", fillcolor = "powderblue"];
+		node_0x7fe261d05a30 [label = "Jordan's jump"];
+		node_0x7fe261d05f30 [label = "Conditionable jump"];
+
+		node_0x7fe261d05930 -> node_0x7fe261d05950 [label = "YES"];
+		node_0x7fe261d05930 -> node_0x7fe261d05a10 [label = "NO"];
+		node_0x7fe261d05a10 -> node_0x7fe261d05a30 [label = "YES"];
+		node_0x7fe261d05a10 -> node_0x7fe261d05f30 [label = "NO"];
+	}
+}
