@@ -1,0 +1,7 @@
+{Is about linal?
+    {Jordan's method}
+    {Is about basketball?
+         {Jordan's jump}
+         {Conditionable jump}
+    }
+}
