@@ -17,13 +17,13 @@ tree_t *TreeCtor (data_t datatop)
     return tree;
 }
 
-node_t *NodeCtor (data_t datanode)
+node_t *NodeCtor (data_t datanode, lexem_kind_t kind)
 {
     assert (datanode);
     node_t *node = (node_t *) calloc (1, sizeof (node_t));
     node->data   = (data_t) calloc (STR_INIT, sizeof (char));
     node->data   = memmove (node->data, datanode, strlen (datanode));
-
+    node->kind   = kind;
     // printf ("ADDRESS of node = %p\n", node);
     // printf ("ADDRESS of node data = %p\n", node->data);
     return node;
@@ -34,7 +34,7 @@ int TreePrint (node_t *top, unsigned count, FILE * file)
 {
     //  just c flex
     assert (file);
-    fprintf (file, "%*s%s", 4*count, "{", top->data);
+    fprintf (file, "%*s%s", 5*count, "{", top->data);
     if (!top->left && !top->right)
     {
         fprintf (file, "}\n");
@@ -57,7 +57,7 @@ int TreePrint (node_t *top, unsigned count, FILE * file)
         TreePrint (top->right, ++count, file);
         --count;
     }
-    fprintf (file, "%*s\n", 4*count, "}");
+    fprintf (file, "%*s\n", 5*count, "}");
     return NO_ERROR;
 }
 
@@ -115,7 +115,7 @@ node_t *TreeFill (lex_array_t * lexus)
         //  выставление на выход из этой лексемы
         lexus->size += 2;
         if (lexus->lexems[lexus->size - 1].lexm.brac == RBRACE)
-            return NodeCtor (lexus->lexems[lexus->size - 2].lexm.data);
+            return NodeCtor (lexus->lexems[lexus->size - 2].lexm.data, lexus->lexems[lexus->size - 2].kind);
         else
         {
             printf ("MISHA all of this on %d is fucking bullshit, let's a new attempt!\n", __LINE__);
@@ -128,26 +128,30 @@ node_t *TreeFill (lex_array_t * lexus)
         //  checking for opening a new node
         if (lexus->lexems[lexus->size + 1].lexm.brac == LBRACE)
         {
-            node_t *top = NodeCtor (lexus->lexems[lexus->size].lexm.data);
+            node_t *top = NodeCtor (lexus->lexems[lexus->size].lexm.data, lexus->lexems[lexus->size].kind);
             lexus->size++;
 
             top->left   = TreeFill (lexus);
 
+            //  unnecessary check for opening left bracket
             if (lexus->lexems[lexus->size].lexm.brac == LBRACE)
                 top->right  = TreeFill (lexus);
-            else
-            {
-                printf ("MISHA all of this on %d is fucking bullshit, let's a new attempt!\n", __LINE__);
-                return NULL;
-            }
-
             if (lexus->lexems[lexus->size].lexm.brac == RBRACE)
+            {
+                lexus->size++;
                 return top;
+            }
             else
             {
                 printf ("MISHA all of this on %d is fucking bullshit, let's a new attempt!\n", __LINE__);
                 return NULL;
             }
+        }
+        else
+        {
+            //  вопрос, не имеющий ответа - бан нахуй
+            printf ("MISHA all of this on %d is fucking bullshit, let's a new attempt!\n", __LINE__);
+            return NULL;
         }
     }
 

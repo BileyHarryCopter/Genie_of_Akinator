@@ -9,7 +9,7 @@ typedef struct tree_t tree_t;
 int TreeDel (node_t *top);
 int NodeDel (node_t *node);
 tree_t *TreeCtor (data_t datatop);
-node_t *NodeCtor (data_t datanode);
+node_t *NodeCtor (data_t datanode, lexem_kind_t kind);
 int TreePrint (node_t *top, unsigned count, FILE *file);
 node_t *ParceTree (lex_array_t *lexus);
 node_t *TreeFill (lex_array_t * lexus);
