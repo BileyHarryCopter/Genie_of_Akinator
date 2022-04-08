@@ -7,6 +7,7 @@ typedef struct node_t
 {
     struct node_t  *left, *right;
     unsigned       depth;
+    lexem_kind_t   kind;
     data_t         data;
 } node_t;
 
