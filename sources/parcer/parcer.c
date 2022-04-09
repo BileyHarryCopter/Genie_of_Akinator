@@ -29,8 +29,20 @@ node_t *NodeCtor (data_t datanode, lexem_kind_t kind)
     return node;
 }
 
+int TreePrint (node_t *top, const char * output_name)
+{
+    assert (top);
+    assert (output_name);
+    FILE * output = fopen (output_name, WRITING);
+    assert (output);
+    TreePrintIn (top, 0, output);
+    fclose (output);
+
+    return NO_ERROR;
+}
+
 //  realization by DED
-int TreePrint (node_t *top, unsigned count, FILE * file)
+int TreePrintIn (node_t *top, unsigned count, FILE * file)
 {
     //  just c flex
     assert (file);
@@ -43,25 +55,25 @@ int TreePrint (node_t *top, unsigned count, FILE * file)
     fprintf (file, "\n");
     if (top->left && !top->right)
     {
-        TreePrint (top->left, ++count, file);
+        TreePrintIn (top->left, ++count, file);
         --count;
     }
     if (!top->left && top->right)
     {
-        TreePrint (top->right, ++count, file);
+        TreePrintIn (top->right, ++count, file);
         --count;
     }
-    if (top->left && top->right && TreePrint (top->left, ++count, file) == NO_ERROR)
+    if (top->left && top->right && TreePrintIn (top->left, ++count, file) == NO_ERROR)
     {
         --count;
-        TreePrint (top->right, ++count, file);
+        TreePrintIn (top->right, ++count, file);
         --count;
     }
     fprintf (file, "%*s\n", 5*count, "}");
     return NO_ERROR;
 }
 
-int NodeDel (node_t *node)
+int NodeDelete (node_t *node)
 {
     assert (node);
     assert (node->data);
@@ -71,23 +83,23 @@ int NodeDel (node_t *node)
     return NO_ERROR;
 }
 
-int TreeDel (node_t *top)
+int TreeDelete (node_t *top)
 {
     // printf ("pointer = %p\n", top);
     // printf ("data    = %s\n", top->data);
     // printf ("pointer data = %p\n", top->data);
     if (!top->left && !top->right)
     {
-        NodeDel (top);
+        NodeDelete (top);
         return NO_ERROR;
     }
     if (top->left && !top->right)
-        TreeDel (top->left);
+        TreeDelete (top->left);
     if (!top->left && top->right)
-        TreeDel (top->right);
-    if (top->left && top->right && TreeDel (top->left) == NO_ERROR)
-        TreeDel (top->right);
-    NodeDel (top);
+        TreeDelete (top->right);
+    if (top->left && top->right && TreeDelete (top->left) == NO_ERROR)
+        TreeDelete (top->right);
+    NodeDelete (top);
     return NO_ERROR;
 }
 
