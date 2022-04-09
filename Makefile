@@ -6,11 +6,12 @@ CFLAGS= -c
 LEXERSRC=  sources/lexer
 PARCERSRC= sources/parcer
 DUMPSRC= sources/dump
+GAMESRC= sources/game
 
 all: start clean
 
-start: main.o lexer.o parcer.o dump.o
-	$(CC) main.o lexer.o parcer.o dump.o -o start
+start: main.o lexer.o parcer.o dump.o game.o
+	$(CC) main.o lexer.o parcer.o dump.o game.o -o start
 
 main.o:
 	$(CC) $(CFLAGS) main.c
@@ -23,6 +24,9 @@ parcer.o:
 
 dump.o:
 	$(CC) $(CFLAGS) $(DUMPSRC)/dump.c
+
+game.o:
+	$(CC) $(CFLAGS) $(GAMESRC)/game.c
 
 run:
 	./start
