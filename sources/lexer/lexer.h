@@ -25,7 +25,7 @@ typedef struct lex_array_t lex_array_t;
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
                     //  lexer's function prototypes   //
 //===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*===*//
-int StrDel (char *str);
+int StrDelete (char *str);
 int IsQuest (char *str);
 int LexsResz (lex_array_t *lexus);
 int LexsPrint (lex_array_t *lexus);

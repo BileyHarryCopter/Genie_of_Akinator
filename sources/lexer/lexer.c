@@ -152,7 +152,7 @@ char * StrCtor (char first, FILE *file)
     return str;
 }
 
-int StrDel (char *str)
+int StrDelete (char *str)
 {
     assert (str);
     free (str);
@@ -208,7 +208,7 @@ int LexsFill (lex_array_t *lexus, const char *file_name)
                 LexsInsert (lexus, QUESTION, str);
             else
                 LexsInsert (lexus, ANSWER, str);
-            StrDel (str);
+            StrDelete (str);
         }
     }
 
