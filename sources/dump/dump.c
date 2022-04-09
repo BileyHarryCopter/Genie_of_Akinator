@@ -40,7 +40,7 @@ int NodeGraphLink (node_t *tree, FILE * file)
     return NO_ERROR;
 }
 
-int GraphDump (node_t *tree)
+int GraphDump (node_t *tree, dump_modes mode)
 {
     assert (tree);
     FILE * file = fopen ("sources/dump/dump_tree.dot", "w");
@@ -58,7 +58,6 @@ int GraphDump (node_t *tree)
             "\t\tedge [color = \"black\", fontcolor = \"teal\", fontsize = 10, fontname = \"Impact\"];\n"
             "\n");
 
-
     NodeGraphInit (tree, file);
     fprintf (file, "\n");
     NodeGraphLink (tree, file);
@@ -70,6 +69,11 @@ int GraphDump (node_t *tree)
     fclose (file);
 
     system ("dot sources/dump/dump_tree.dot -T png -o sources/dump/dump_tree.png");
+
+    if (mode == OPEN)
+    {
+        system ("open sources/dump/dump_tree.png");
+    }
 
     return NO_ERROR;
 }

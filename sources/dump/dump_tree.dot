@@ -6,17 +6,17 @@ digraph AKINATOR
 	subgraph TREE
 	{
 		node [shape = egg, style = "filled", fillcolor = "bisque", fontcolor = "black", fontsize = 12];
-		edge [color = "black", fontcolor = "black", fontsize = 12, fontname = "Impact"];
+		edge [color = "black", fontcolor = "teal", fontsize = 10, fontname = "Impact"];
 
-		node_0x7fe261d05930 [label = "Is about linal?", fillcolor = "powderblue"];
-		node_0x7fe261d05950 [label = "Jordan's method"];
-		node_0x7fe261d05a10 [label = "Is about basketball?", fillcolor = "powderblue"];
-		node_0x7fe261d05a30 [label = "Jordan's jump"];
-		node_0x7fe261d05f30 [label = "Conditionable jump"];
+		node_0x7fb48b604090 [label = "Is about linal?", fillcolor = "powderblue"];
+		node_0x7fb48b6040b0 [label = "Jordan's method"];
+		node_0x7fb48b604170 [label = "Is about basketball?", fillcolor = "powderblue"];
+		node_0x7fb48b604190 [label = "Jordan's jump"];
+		node_0x7fb48b604690 [label = "Conditionable jump"];
 
-		node_0x7fe261d05930 -> node_0x7fe261d05950 [label = "YES"];
-		node_0x7fe261d05930 -> node_0x7fe261d05a10 [label = "NO"];
-		node_0x7fe261d05a10 -> node_0x7fe261d05a30 [label = "YES"];
-		node_0x7fe261d05a10 -> node_0x7fe261d05f30 [label = "NO"];
+		node_0x7fb48b604090 -> node_0x7fb48b6040b0 [label = "YES"];
+		node_0x7fb48b604090 -> node_0x7fb48b604170 [label = "NO"];
+		node_0x7fb48b604170 -> node_0x7fb48b604190 [label = "YES"];
+		node_0x7fb48b604170 -> node_0x7fb48b604690 [label = "NO"];
 	}
 }
