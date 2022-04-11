@@ -2,23 +2,15 @@
 
 # How to launch #
 
-## Version for MacOS: ##
-
 1. Firstly, check your **git version**. If you still haven't git system on your OS, please, be patient to follow all of the instruction points from this site: <https://habr.com/ru/post/588801/>. For checking your own git version write down in command line:
 
         git --version
 
-2. Now to clone the repository with:
+2. Now clone the repository with:
 
         git clone git@github.com:BileyHarryCopter/Genie_of_Akinator.git
 
-## Version for Ubuntu
 
-##Version for Linux
-
-## Version for Windows
-
-### Sorry, goodbye ###
 
 # TODO
 ## on 06 April: - it was done 07 April
