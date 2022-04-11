@@ -5,7 +5,8 @@
 ## Version for MacOS: ##
 
 1. Firstly, check your **git**. If you still haven't git system on your OS, please, be patient to follow all of the instruction points from this site: <https://habr.com/ru/post/588801/>. For checking your own git version write down in command line:
-    git --v
+
+        git --v
 
 2. Some are set
 
