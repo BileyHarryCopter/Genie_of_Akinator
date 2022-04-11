@@ -1,6 +1,6 @@
 # Genie of Akinator #
 
-# How to launch #
+## How to install ##
 
 1. Firstly, check your **git version**. If you still haven't git system on your OS, please, be patient to follow all of the instruction points from this site: <https://habr.com/ru/post/588801/>. For checking your own git version write down in command line:
 
@@ -9,9 +9,7 @@
 2. Now clone the repository with:
 
         git clone git@github.com:BileyHarryCopter/Genie_of_Akinator.git
-
-
-
+        
 # TODO
 ## on 06 April: - it was done 07 April
     1. ADD a Parcer from array of lexems to binary tree
