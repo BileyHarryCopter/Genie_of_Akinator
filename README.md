@@ -1,4 +1,8 @@
 # Genie_of_Akinator
+
+How to launch
+=============
+
 # TODO
 ## on 06 April: - it was done 07 April
     1. ADD a Parcer from array of lexems to binary tree
