@@ -9,8 +9,22 @@
 2. Now clone the repository with:
 
         git clone git@github.com:BileyHarryCopter/Genie_of_Akinator.git
-        
-# TODO
+
+## How to make ##
+
+1. Just enter in the directory with clonned repository and launch make:
+
+        cd Akinator
+        make
+
+2. After this you receive file **./start** with Akinator Game. You can launch this file in different modes:
+
+    1. 
+
+
+
+
+# TODO:
 ## on 06 April: - it was done 07 April
     1. ADD a Parcer from array of lexems to binary tree
     2. Create a simlpe graph dump for  binary tree
