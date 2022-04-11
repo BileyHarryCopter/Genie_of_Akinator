@@ -1,6 +1,23 @@
-# Genie_of_Akinator
+# Genie of Akinator #
 
-<div style = "text-align: right"> #How to launch </div>
+# How to launch #
+
+## Version for MacOS: ##
+
+1. Firstly, check your **git**. If you still haven't git system on your OS, please, be patient to follow all of the instruction points from this site: <https://habr.com/ru/post/588801/>. For checking your own git version write down in command line:
+
+    git --v
+
+2.
+
+
+## Version for Ubuntu
+
+##Version for Linux
+
+## Version for Windows
+
+### Sorry, goodbye ###
 
 # TODO
 ## on 06 April: - it was done 07 April
