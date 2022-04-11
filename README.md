@@ -1,6 +1,6 @@
 # Genie_of_Akinator
 
-<div style = "text-align: right"> How to launch </div>
+<div style = "text-align: right"> #How to launch </div>
 
 # TODO
 ## on 06 April: - it was done 07 April
