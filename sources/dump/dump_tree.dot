@@ -8,15 +8,23 @@ digraph AKINATOR
 		node [shape = egg, style = "filled", fillcolor = "bisque", fontcolor = "black", fontsize = 12];
 		edge [color = "black", fontcolor = "teal", fontsize = 10, fontname = "Impact"];
 
-		node_0x7fb48b604090 [label = "Is about linal?", fillcolor = "powderblue"];
-		node_0x7fb48b6040b0 [label = "Jordan's method"];
-		node_0x7fb48b604170 [label = "Is about basketball?", fillcolor = "powderblue"];
-		node_0x7fb48b604190 [label = "Jordan's jump"];
-		node_0x7fb48b604690 [label = "Conditionable jump"];
+		node_0x7fd63d5041c0 [label = "Is about linal?", fillcolor = "powderblue"];
+		node_0x7fd63d5041e0 [label = "Leads for RT?", fillcolor = "powderblue"];
+		node_0x7fd63d5042a0 [label = "Chuba"];
+		node_0x7fd63d504360 [label = "Jordan's method"];
+		node_0x7fd63d504420 [label = "Is about basketball?", fillcolor = "powderblue"];
+		node_0x7fd63d5044e0 [label = "Jordan's jump"];
+		node_0x7fd63d704140 [label = "It is govno?", fillcolor = "powderblue"];
+		node_0x7fd63d704120 [label = "Basic"];
+		node_0x7fd63d5045a0 [label = "Conditionable jump"];
 
-		node_0x7fb48b604090 -> node_0x7fb48b6040b0 [label = "YES"];
-		node_0x7fb48b604090 -> node_0x7fb48b604170 [label = "NO"];
-		node_0x7fb48b604170 -> node_0x7fb48b604190 [label = "YES"];
-		node_0x7fb48b604170 -> node_0x7fb48b604690 [label = "NO"];
+		node_0x7fd63d5041c0 -> node_0x7fd63d5041e0 [label = "YES"];
+		node_0x7fd63d5041c0 -> node_0x7fd63d504420 [label = "NO"];
+		node_0x7fd63d5041e0 -> node_0x7fd63d5042a0 [label = "YES"];
+		node_0x7fd63d5041e0 -> node_0x7fd63d504360 [label = "NO"];
+		node_0x7fd63d504420 -> node_0x7fd63d5044e0 [label = "YES"];
+		node_0x7fd63d504420 -> node_0x7fd63d704140 [label = "NO"];
+		node_0x7fd63d704140 -> node_0x7fd63d704120 [label = "YES"];
+		node_0x7fd63d704140 -> node_0x7fd63d5045a0 [label = "NO"];
 	}
 }

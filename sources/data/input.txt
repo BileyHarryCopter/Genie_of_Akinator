@@ -1,7 +1,13 @@
 {Is about linal?
-    {Jordan's method}
+    {Leads for RT?
+         {Chuba}
+         {Jordan's method}
+    }
     {Is about basketball?
          {Jordan's jump}
-         {Conditionable jump}
+         {It is govno?
+              {Basic}
+              {Conditionable jump}
+         }
     }
 }
