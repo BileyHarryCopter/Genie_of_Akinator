@@ -1,5 +1,11 @@
 # Genie of Akinator #
 
+## Short description ##
+
+**Akinator game** is a project from 1sr year of **ILab** course lead by [Ilya Dedinsky](https://github.com/ded32?tab=following).  
+This game is self-studying program what asked user to make a with something and try to guess this.  
+
+
 ## How to install ##
 
 1. Firstly, check your **git version**. If you still haven't git system on your OS, please, be patient to follow all of the instruction points from this site: <https://habr.com/ru/post/588801/>. For checking your own git version write down in command line:
