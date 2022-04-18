@@ -56,7 +56,6 @@ int LexsInsert (lex_array_t *lexus, lexem_kind_t kind, ...)
         brac = va_arg (args, braces);
     }
 
-
     assert (lexus);
     if (lexus->size > KRIT_KF * lexus->capacity)
         LexsResz (lexus);
@@ -67,13 +66,15 @@ int LexsInsert (lex_array_t *lexus, lexem_kind_t kind, ...)
     {
         case QUESTION:
         case ANSWER:
-            lexus->lexems[lexus->size].lexm.data = (char *) calloc (strlen(data), sizeof (char));
+            lexus->lexems[lexus->size].lexm.data = (char *) calloc (strlen(data) + 1, sizeof (char));
             lexus->lexems[lexus->size].lexm.data = memmove (lexus->lexems[lexus->size].lexm.data, data, strlen(data));
+            // printf ("data on line %d in %d of the mass: %s\n", __LINE__, lexus->size, lexus->lexems[lexus->size].lexm.data);
             break;
         case BRACKET:
             lexus->lexems[lexus->size].lexm.brac = brac;
             break;
         default:
+            // printf ("You are fucking nigger!\n");
             return ERROR;
     }
     lexus->size++;
@@ -124,6 +125,13 @@ FILE * FileOpen (const char *file_name, const char *mode)
     FILE *file = fopen (file_name, mode);
     assert (file);
     return file;
+}
+
+int FileClose (FILE *file)
+{
+    assert (file);
+    fclose (file);
+    return NO_ERROR;
 }
 
 char * StrCtor (char first, FILE *file)
@@ -189,7 +197,7 @@ int LexsFill (lex_array_t *lexus, const char *file_name)
     while (symb != EOF)
     {
         symb = getc (file);
-
+        // printf ("%c\n", symb);
         if (isspace(symb))
             continue;
 
@@ -205,13 +213,19 @@ int LexsFill (lex_array_t *lexus, const char *file_name)
         {
             str = StrCtor (symb, file);
             if (IsQuest (str))
+            {
+                // printf ("QUESTION: %s\n", str);
                 LexsInsert (lexus, QUESTION, str);
+            }
             else
+            {
+                // printf ("ANSWER: %s\n", str);
                 LexsInsert (lexus, ANSWER, str);
+            }
             StrDelete (str);
         }
     }
 
-    fclose (file);
+    FileClose (file);
     return NO_ERROR;
 }

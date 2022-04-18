@@ -265,9 +265,15 @@ int RunAkinator (const char * input_name, const char * output_name)
         GraphDump (tree, JUST);
     printf ("Thanks for using. Goodbye, bro!\n");
 
+
+    //  TreePrint (tree, input_name);
+    TreePrint (tree, "sources/data/input.txt");
+
+    /*
     //       keep saving a new tree        //
     TreePrint (tree, "sources/data/input.txt");
     //       keep saving a new tree        //
+    */
 
     free (answer);
     LexsDelete (lexus);
