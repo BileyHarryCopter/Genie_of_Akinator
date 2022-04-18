@@ -3,7 +3,18 @@
 ## Short description ##
 
 **Akinator game** is a project from 1sr year of **ILab** course lead by [Ilya Dedinsky](https://github.com/ded32?tab=following).  
-This game is self-studying program what asked user to make a with something and try to guess this.  
+This game is self-studying program what asked user to make a with something and try to guess it.
+
+## Principle of recording, gaming and studying ##
+
+Magical knowledge of Akinator is a result of accomplishment following points:
+
+1. The data is loaded with text input in appropriate form in file `sources/data/input.txt`:
+
+
+![Page of recording tree](https://github.com/BileyHarryCopter/Genie_of_Akinator/blob/main/sources/examples/example_input.png)
+
+2. The program
 
 
 ## How to install ##
