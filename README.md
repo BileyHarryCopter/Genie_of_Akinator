@@ -40,3 +40,9 @@ Magical knowledge of Akinator is a result of accomplishment following points:
 2. After this you receive file **./start** with Akinator Game. For launching the game you need write down this:
 
         ./start
+
+## Examples ##
+
+There is a result of Akinator's working on this picture. The program was launched in **graph dump** mode:
+
+![Completed tree](https://github.com/BileyHarryCopter/Genie_of_Akinator/blob/main/sources/logs/dump_tree.png)
