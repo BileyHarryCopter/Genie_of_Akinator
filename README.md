@@ -33,8 +33,9 @@ Magical knowledge of Akinator is a result of accomplishment following points:
 ## How to make ##
 
 1. Just enter in the directory with clonned repository and launch make:
-`cd Akinator`
-`make`
+
+    cd Akinator
+    make
 
 2. After this you receive file **./start** with Akinator Game:
         ./start
