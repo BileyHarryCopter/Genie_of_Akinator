@@ -267,7 +267,7 @@ int RunAkinator (const char * input_name, const char * output_name)
 
 
     //  TreePrint (tree, input_name);
-    TreePrint (tree, "sources/data/input.txt");
+    TreePrint (tree, input_name);
 
     /*
     //       keep saving a new tree        //

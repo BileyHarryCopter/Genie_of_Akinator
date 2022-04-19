@@ -43,7 +43,7 @@ int NodeGraphLink (node_t *tree, FILE * file)
 int GraphDump (node_t *tree, dump_modes mode)
 {
     assert (tree);
-    FILE * file = fopen ("sources/dump/dump_tree.dot", "w");
+    FILE * file = fopen ("sources/logs/dump_tree.dot", "w");
     fseek (file, 0L, SEEK_SET);
 
     fprintf (file,
@@ -68,11 +68,11 @@ int GraphDump (node_t *tree, dump_modes mode)
 
     fclose (file);
 
-    system ("dot sources/dump/dump_tree.dot -T png -o sources/dump/dump_tree.png");
+    system ("dot sources/logs/dump_tree.dot -T png -o sources/logs/dump_tree.png");
 
     if (mode == OPEN)
     {
-        system ("open sources/dump/dump_tree.png");
+        system ("open sources/logs/dump_tree.png");
     }
 
     return NO_ERROR;
