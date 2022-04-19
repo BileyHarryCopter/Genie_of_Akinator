@@ -14,8 +14,11 @@ Magical knowledge of Akinator is a result of accomplishment following points:
 
 ![Page of recording tree](https://github.com/BileyHarryCopter/Genie_of_Akinator/blob/main/sources/examples/example_input.png)
 
-2. The program
+2. The program read this text and create an array of lexems ([about lexems read here](http://cs.mipt.ru/wp/wp-content/uploads/2018/09/05a-enumerate.pdf))
 
+3. The program parce a binary tree by the array of lexems.
+
+4. Whole magic of the game is just appropriate bypass of the tree: **NLR bypass** in which we firstly come in central node of and subtree, after this we come in left node of subtree and after successful accomplishment we come in right node of subtree.
 
 ## How to install ##
 
@@ -36,17 +39,4 @@ Magical knowledge of Akinator is a result of accomplishment following points:
 2. After this you receive file **./start** with Akinator Game:
         ./start
 
-
-
-
-# TODO:
-## on 06 April: - it was done 07 April
-    1. ADD a Parcer from array of lexems to binary tree
-    2. Create a simlpe graph dump for  binary tree
-
-## on 07 April: - it should be done for today (08 April)
-    1. Modernizate the graph dump   
-    2. To launch working "Akinator"
-
-## on 09 April:
-    1. Create an info worth README for launching the Akinator
+3. 
