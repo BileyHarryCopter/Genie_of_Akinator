@@ -1,0 +1,94 @@
+digraph AKINATOR
+{
+	graph [dpi = 200];
+	rankdir = HR;
+
+	subgraph TREE
+	{
+		node [shape = egg, style = "filled", fillcolor = "bisque", fontcolor = "black", fontsize = 12];
+		edge [color = "black", fontcolor = "teal", fontsize = 10, fontname = "Impact"];
+
+		node_0x7ffa54c05d90 [label = "Teacher in MIPT?", fillcolor = "powderblue"];
+		node_0x7ffa54c05db0 [label = "Performs obshesos?", fillcolor = "powderblue"];
+		node_0x7ffa54c05e70 [label = "Parses two zero group problems per seminar?", fillcolor = "powderblue"];
+		node_0x7ffa54c05e90 [label = "Zhabin "];
+		node_0x7ffa54c05eb0 [label = "Fucks students on labs?", fillcolor = "powderblue"];
+		node_0x7ffa54c05ed0 [label = "All things fly in space?", fillcolor = "powderblue"];
+		node_0x7ffa54c06170 [label = "Potapov "];
+		node_0x7ffa54c06230 [label = "Alyabieva "];
+		node_0x7ffa54c062f0 [label = "HOLLYn "];
+		node_0x7ffa54c063b0 [label = "Performs matan?", fillcolor = "powderblue"];
+		node_0x7ffa54c06470 [label = "Arabic?", fillcolor = "powderblue"];
+		node_0x7ffa54c06530 [label = "Petrovich "];
+		node_0x7ffa54c065f0 [label = "Proger?", fillcolor = "powderblue"];
+		node_0x7ffa54c066b0 [label = "Churbanov "];
+		node_0x7ffa54c06770 [label = "Skubachevich "];
+		node_0x7ffa54c06830 [label = "Likes My Little Pony?", fillcolor = "powderblue"];
+		node_0x7ffa54c068f0 [label = "Vladimirov "];
+		node_0x7ffa54c069b0 [label = "True Zhopa Contest System?", fillcolor = "powderblue"];
+		node_0x7ffa54c06a70 [label = "Podlesnykh "];
+		node_0x7ffa54c06b30 [label = "Ded "];
+		node_0x7ffa54c06bf0 [label = "Animal?", fillcolor = "powderblue"];
+		node_0x7ffa54c06cb0 [label = "Lives in swapm?", fillcolor = "powderblue"];
+		node_0x7ffa54c06d70 [label = "can qua?", fillcolor = "powderblue"];
+		node_0x7ffa54c06e30 [label = "Zaba "];
+		node_0x7ffa54c06ef0 [label = "Ovcnikin "];
+		node_0x7ffa54c06fb0 [label = "Barks?", fillcolor = "powderblue"];
+		node_0x7ffa54c07070 [label = "Yellow?", fillcolor = "powderblue"];
+		node_0x7ffa54c07130 [label = "Zheltaya "];
+		node_0x7ffa54c071f0 [label = "Chornaya "];
+		node_0x7ffa54c07a50 [label = "Gry to yellow cars?", fillcolor = "powderblue"];
+		node_0x7ffa54c07a30 [label = "Yellow"];
+		node_0x7ffa54c072b0 [label = "Poltorashka "];
+		node_0x7ffa54c07370 [label = "Organized murder od Ded?", fillcolor = "powderblue"];
+		node_0x7ffa54c07430 [label = "Sosanya "];
+		node_0x7ffa54c074f0 [label = "Beatiful starosta?", fillcolor = "powderblue"];
+		node_0x7ffa54c075b0 [label = "Masha "];
+		node_0x7ffa54c07670 [label = "Perform shinus?", fillcolor = "powderblue"];
+		node_0x7ffa54c07730 [label = "Tima "];
+		node_0x7ffa54c077f0 [label = "Ask your name?", fillcolor = "powderblue"];
+		node_0x7ffa54c078b0 [label = "Filkin "];
+		node_0x7ffa54c07970 [label = "Ilya Mirkis "];
+
+		node_0x7ffa54c05d90 -> node_0x7ffa54c05db0 [label = "YES"];
+		node_0x7ffa54c05d90 -> node_0x7ffa54c06bf0 [label = "NO"];
+		node_0x7ffa54c05db0 -> node_0x7ffa54c05e70 [label = "YES"];
+		node_0x7ffa54c05db0 -> node_0x7ffa54c063b0 [label = "NO"];
+		node_0x7ffa54c05e70 -> node_0x7ffa54c05e90 [label = "YES"];
+		node_0x7ffa54c05e70 -> node_0x7ffa54c05eb0 [label = "NO"];
+		node_0x7ffa54c05eb0 -> node_0x7ffa54c05ed0 [label = "YES"];
+		node_0x7ffa54c05eb0 -> node_0x7ffa54c062f0 [label = "NO"];
+		node_0x7ffa54c05ed0 -> node_0x7ffa54c06170 [label = "YES"];
+		node_0x7ffa54c05ed0 -> node_0x7ffa54c06230 [label = "NO"];
+		node_0x7ffa54c063b0 -> node_0x7ffa54c06470 [label = "YES"];
+		node_0x7ffa54c063b0 -> node_0x7ffa54c06830 [label = "NO"];
+		node_0x7ffa54c06470 -> node_0x7ffa54c06530 [label = "YES"];
+		node_0x7ffa54c06470 -> node_0x7ffa54c065f0 [label = "NO"];
+		node_0x7ffa54c065f0 -> node_0x7ffa54c066b0 [label = "YES"];
+		node_0x7ffa54c065f0 -> node_0x7ffa54c06770 [label = "NO"];
+		node_0x7ffa54c06830 -> node_0x7ffa54c068f0 [label = "YES"];
+		node_0x7ffa54c06830 -> node_0x7ffa54c069b0 [label = "NO"];
+		node_0x7ffa54c069b0 -> node_0x7ffa54c06a70 [label = "YES"];
+		node_0x7ffa54c069b0 -> node_0x7ffa54c06b30 [label = "NO"];
+		node_0x7ffa54c06bf0 -> node_0x7ffa54c06cb0 [label = "YES"];
+		node_0x7ffa54c06bf0 -> node_0x7ffa54c07370 [label = "NO"];
+		node_0x7ffa54c06cb0 -> node_0x7ffa54c06d70 [label = "YES"];
+		node_0x7ffa54c06cb0 -> node_0x7ffa54c06fb0 [label = "NO"];
+		node_0x7ffa54c06d70 -> node_0x7ffa54c06e30 [label = "YES"];
+		node_0x7ffa54c06d70 -> node_0x7ffa54c06ef0 [label = "NO"];
+		node_0x7ffa54c06fb0 -> node_0x7ffa54c07070 [label = "YES"];
+		node_0x7ffa54c06fb0 -> node_0x7ffa54c07a50 [label = "NO"];
+		node_0x7ffa54c07070 -> node_0x7ffa54c07130 [label = "YES"];
+		node_0x7ffa54c07070 -> node_0x7ffa54c071f0 [label = "NO"];
+		node_0x7ffa54c07a50 -> node_0x7ffa54c07a30 [label = "YES"];
+		node_0x7ffa54c07a50 -> node_0x7ffa54c072b0 [label = "NO"];
+		node_0x7ffa54c07370 -> node_0x7ffa54c07430 [label = "YES"];
+		node_0x7ffa54c07370 -> node_0x7ffa54c074f0 [label = "NO"];
+		node_0x7ffa54c074f0 -> node_0x7ffa54c075b0 [label = "YES"];
+		node_0x7ffa54c074f0 -> node_0x7ffa54c07670 [label = "NO"];
+		node_0x7ffa54c07670 -> node_0x7ffa54c07730 [label = "YES"];
+		node_0x7ffa54c07670 -> node_0x7ffa54c077f0 [label = "NO"];
+		node_0x7ffa54c077f0 -> node_0x7ffa54c078b0 [label = "YES"];
+		node_0x7ffa54c077f0 -> node_0x7ffa54c07970 [label = "NO"];
+	}
+}
