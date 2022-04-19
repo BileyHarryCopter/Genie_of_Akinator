@@ -37,7 +37,8 @@ Magical knowledge of Akinator is a result of accomplishment following points:
         cd Akinator   
         make
 
-2. After this you receive file **./start** with Akinator Game:
+2. After this you receive file **./start** with Akinator Game. For launching the game you need write down this:
+
         ./start
 
 3.
