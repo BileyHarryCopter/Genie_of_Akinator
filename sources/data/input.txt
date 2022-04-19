@@ -1,10 +1,7 @@
 {Teacher in MIPT?
     {Performs obshesos?
          {Parses two zero group problems per seminar?
-              {It looks like a hobit?
-                   {Igumenov}
-                   {Zhabin }
-              }
+              {Zhabin }
               {Fucks students on labs?
                    {All things fly in space?
                         {Potapov }
@@ -41,7 +38,10 @@
                         {Zheltaya }
                         {Chornaya }
                    }
-                   {Poltorashka }
+                   {n?
+                        {GOLDEN}
+                        {Poltorashka }
+                   }
               }
          }
          {Organized murder od Ded?
@@ -57,5 +57,18 @@
                    }
               }
          }
+    }
+}
+
+
+
+
+{
+    Is it animal?
+    {Cat Vasily}
+    {
+        Is it human?
+        {Michel Jordan}
+        {Michel Obama}
     }
 }

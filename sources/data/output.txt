@@ -1,4 +1,4 @@
-{Teacher in MIPT?Performs obshesos?
+{Teacher in MIPT?
     {Performs obshesos?
          {Parses two zero group problems per seminar?
               {Zhabin}
